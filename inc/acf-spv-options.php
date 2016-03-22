@@ -13,7 +13,7 @@ function p_Strings($thi_s, $tha_t){
 add_action( 'admin_menu', 'add_acf_spv_setting_page' ); 
 
 function add_acf_spv_setting_page() {
-	add_menu_page('options-general.php', 'ACF PHP VARS', 'edit_theme_options', 'acf_spv_show_variables', 'acf_spv_show_variables' );
+	add_menu_page('options-general.php', 'ACF PHP VARS', 'edit_theme_options', 'acf_spv_show_variables', 'acf_spv_show_variables', ACFSPVURL.'/css/icons/sm-acf-logo.png');
 }
 
 function acf_spv_show_variables(){
