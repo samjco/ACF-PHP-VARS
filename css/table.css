@@ -1,0 +1,7 @@
+#acf-table tr:nth-child(even){
+	background-color: #eee;
+}
+#acf-table tr(){
+	border-bottom: 1px solid #f5f5f5;
+}
+.hide{ display: none;}
