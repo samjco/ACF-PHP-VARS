@@ -15,7 +15,7 @@ if( !defined('ABSPATH') ){
 	define('ABSPATH', dirname(__FILE__) . '/');
 }
 //define plugin path constant
-define( 'ACFSPVURL', WP_PLUGIN_URL . '/acf-php-vars' );
+define( 'ACFSPVURL', WP_PLUGIN_URL . '/acf-php-vars-master' );
 
 //Include the options page
 function get_acfspv_options(){
