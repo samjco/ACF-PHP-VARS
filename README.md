@@ -13,6 +13,8 @@ This plugin keeps you from having to keep switching back-and-forth screens in or
 
 I hope that you enjoy this plugin.
 
+Demo video: http://screencast.com/t/pS9dukeU
+
 Screenshot of ACF fields vars names
 <img src="https://github.com/samjco/ACF-PHP-VARS/blob/master/screenshot-1.jpg?raw=true" />
 
