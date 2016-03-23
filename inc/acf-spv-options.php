@@ -48,7 +48,7 @@ function acf_spv_show_variables(){
 						<br><div style="margin-top:8px;padding:6px 0px; border: 1px solid #ddd;background:#eee;">
 
 						<!-- Button to Copy Paste ALL -->
-					    <button style="margin-left:8px;" class="btn" data-clipboard-action="copy" data-clipboard-target="#acf-table tbody">Copy & Paste All</button>
+					    <button style="margin-left:8px;" class="btn" data-clipboard-action="copy" data-clipboard-target="#acf-table tbody">Copy All to Clipboard</button>
 
 						<label style="border-right:1px solid #ddd;padding:4px 16px 4px 8px;font-weight:bold;" class="code">SHOW/TOGGLE:</label> 
 						<label style="border-right:1px solid #ddd;padding:4px 16px 4px 8px;" class="code"><input type="checkbox" name="vauChange" value="changefunction" id="toggle-function-id"> Use Function: the_field</label>
@@ -92,7 +92,7 @@ function acf_spv_show_variables(){
 					echo "<tr id=''><td><div id='div-".sanitize_title($acf_field_group_TITLE)."' class='code' style='padding:25px;'>";
 					if($count = 1): 
 						$count++; 
-					    echo '<span style="opacity:0;color:white;">&lt;!---</span><button style="margin-left:8px; display:block;float:right;" class="btn" data-clipboard-action="copy" data-clipboard-target="#div-'.sanitize_title($acf_field_group_TITLE).'">Copy this</button><span style="opacity:0;color:white;">--&gt;</span>';
+					    echo '<span style="opacity:0;">&lt;!---</span><button style="display:block;" class="btn noselect" data-clipboard-action="copy" data-clipboard-target="#div-'.sanitize_title($acf_field_group_TITLE).'"> Copy Code </button><span style="opacity:0;">--&gt;</span>';
 
 					    echo "<pre>&lt;?php<br>/*<br>";
 					    echo "<br>*************************************<br>";
