@@ -48,7 +48,7 @@ function acf_spv_show_variables(){
 						<br><div style="margin-top:8px;padding:6px 0px; border: 1px solid #ddd;background:#eee;">
 
 						  <!-- 1. Define some markup -->
-					    <button style="margin-left:8px;" class="btn" data-clipboard-action="copy" data-clipboard-target="#MyDiv">Copy & Paste</button>
+					    <button style="margin-left:8px;" class="btn" data-clipboard-action="copy" data-clipboard-target="#acf-table tbody">Copy & Paste</button>
 
 						    <!-- 2. Include library -->
 
