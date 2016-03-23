@@ -43,7 +43,10 @@ If this is the case with you, make sure you have custom fields created.
 
 1. Fields vars displayed.
 2. Fields vars showing as Keys.
-3. Example code displayed.s
+3. Example code displayed.
+
+== Upgrade Notice ==
+* None yet
 
 == Changelog ==
 
