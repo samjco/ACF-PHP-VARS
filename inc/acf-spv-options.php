@@ -89,10 +89,10 @@ function acf_spv_show_variables(){
 
 				//now, we can grab the field objects with our newly created field key
 
-					echo "<tr id=''><td><div id='".sanitize_title($acf_field_group_TITLE)."' class='code' style='padding:25px;'>";
+					echo "<tr id=''><td><div id='div-".sanitize_title($acf_field_group_TITLE)."' class='code' style='padding:25px;'>";
 					if($count = 1): 
 						$count++; 
-					    echo '<span style="opacity:0;color:white;">&lt;!---</span><button style="margin-left:8px; display:block;float:right;" class="btn" data-clipboard-action="copy" data-clipboard-target="#'.sanitize_title($acf_field_group_TITLE).'">Copy this</button><span style="opacity:0;color:white;">--&gt;</span>';
+					    echo '<span style="opacity:0;color:white;">&lt;!---</span><button style="margin-left:8px; display:block;float:right;" class="btn" data-clipboard-action="copy" data-clipboard-target="#div-'.sanitize_title($acf_field_group_TITLE).'">Copy this</button><span style="opacity:0;color:white;">--&gt;</span>';
 
 					    echo "<pre>&lt;?php<br>/*<br>";
 					    echo "<br>*************************************<br>";
