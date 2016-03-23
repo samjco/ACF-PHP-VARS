@@ -1,5 +1,6 @@
 === ACF PHP VARS ===
 Contributors: Sam Cohen
+Donate Link: https://PayPal.Me/samjco
 Tags: advanced custom fields, variables, vars, acf, php
 Requires at least: 3.0.1
 Tested up to: 4.1
