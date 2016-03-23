@@ -25,7 +25,7 @@ function acf_spv_show_variables(){
 	//Creates the table. The ID and Class make the sorting work. ?>
 	<h2>ACF Show PHP Variables | Template Usage</h2>
 	<p class="description">(Copy and Paste into your template file.)</p>
-	<?php $acf_fgd_tab = "1"; ?>
+
 	<?php if($acf_field_group_VARS[0] != ''){ ?>
 		<table id="acf-table" class="tablesorterx wp-list-table widefat users">
 			<thead>
@@ -47,24 +47,8 @@ function acf_spv_show_variables(){
 						?>
 						<br><div style="margin-top:8px;padding:6px 0px; border: 1px solid #ddd;background:#eee;">
 
-						  <!-- 1. Define some markup -->
-					    <button style="margin-left:8px;" class="btn" data-clipboard-action="copy" data-clipboard-target="#acf-table tbody">Copy & Paste</button>
-
-						    <!-- 2. Include library -->
-
-
-					    <!-- 3. Instantiate clipboard -->
-					    <script>
-					    var clipboard = new Clipboard('.btn');
-					    clipboard.on('success', function(e) {
-					    	alert('Copied to Clipboard!')
-					        console.log(e);
-					    });
-					    clipboard.on('error', function(e) {
-					        console.log(e);
-					    });
-					    </script>
-
+						<!-- Button to Copy Paste ALL -->
+					    <button style="margin-left:8px;" class="btn" data-clipboard-action="copy" data-clipboard-target="#acf-table tbody">Copy & Paste All</button>
 
 						<label style="border-right:1px solid #ddd;padding:4px 16px 4px 8px;font-weight:bold;" class="code">SHOW/TOGGLE:</label> 
 						<label style="border-right:1px solid #ddd;padding:4px 16px 4px 8px;" class="code"><input type="checkbox" name="vauChange" value="changefunction" id="toggle-function-id"> Use Function: the_field</label>
@@ -79,7 +63,7 @@ function acf_spv_show_variables(){
 				
 				</tr>
 			</thead>
-		<?php		
+		    <?php		
 			foreach ($acf_field_group_VARS as $acf_field_group_VAR) {
 				
 				//Grab the id the of ACF Field group
@@ -105,12 +89,14 @@ function acf_spv_show_variables(){
 
 				//now, we can grab the field objects with our newly created field key
 
-					echo "<tr><td><div id='MyDiv' class='code' style='padding:25px;'>";
+					echo "<tr id=''><td><div id='".sanitize_title($acf_field_group_TITLE)."' class='code' style='padding:25px;'>";
 					if($count = 1): 
 						$count++; 
-					    echo "<pre>&lt;?php<br>/*<br>*************************************<br>ACF FIELD GROUP: ";
+					    echo '<span style="opacity:0;color:white;">&lt;!---</span><button style="margin-left:8px; display:block;float:right;" class="btn" data-clipboard-action="copy" data-clipboard-target="#'.sanitize_title($acf_field_group_TITLE).'">Copy this</button><span style="opacity:0;color:white;">--&gt;</span>';
+
+					    echo "<pre>&lt;?php<br>/*<br>";
 					    echo "<br>*************************************<br>";
-					    echo $acf_field_group_TITLE . "<br>";
+					    echo "Field Group:<br>".$acf_field_group_TITLE . "<br>";
 					    echo "*************************************<br>";
 					    echo "Made by ACF PHP VARS plugin<br>*************************************<br>*/</pre>"; 
 					endif;
@@ -157,7 +143,7 @@ function acf_spv_show_variables(){
 					    echo '<span class="hide toggle-example">';
 					    echo "<pre><br><br>/";
 					    echo "*************************************";
-					    echo "<br>ACF EXAMPLE CODE DECLARED VARS: <br>";
+					    echo "<br>ACF EXAMPLE CODE: <br>";
 					    echo "*************************************";					  
 					    echo "/</pre>"; 
 					    echo '</span>';
@@ -193,10 +179,23 @@ function acf_spv_show_variables(){
 			}
 		?>
 		</table>
+
+					    <!-- 3. Instantiate clipboard -->
+					    <script>
+					    var clipboard = new Clipboard('.btn');
+					    clipboard.on('success', function(e) {
+					    	alert('Copied to Clipboard!')
+					        //console.log(e);
+					    });
+					    clipboard.on('error', function(e) {
+					        console.log(e);
+					    });
+					    </script>
+
+
 	<?php } else {?>
 		<h2>You don't have any fields created yet.</h2>
 		<h3><a href="<?php echo site_url('/wp-admin/post-new.php?post_type=acf'); ?>">Get Started!</a></h3>
 	<?php } // End if ?>
 <?php } //acf_spv_show_variables() 
 ?>
-
