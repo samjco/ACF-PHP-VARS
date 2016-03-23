@@ -96,7 +96,7 @@ function acf_spv_show_variables(){
 
 					    echo "<pre>&lt;?php<br>/*<br>";
 					    echo "<br>*************************************<br>";
-					    echo "Field Group:<br>".$acf_field_group_TITLE . "<br>";
+					    echo "ACF FIELD GROUP:<br>".$acf_field_group_TITLE . "<br>";
 					    echo "*************************************<br>";
 					    echo "Made by ACF PHP VARS plugin<br>*************************************<br>*/</pre>"; 
 					endif;
@@ -197,5 +197,4 @@ function acf_spv_show_variables(){
 		<h2>You don't have any fields created yet.</h2>
 		<h3><a href="<?php echo site_url('/wp-admin/post-new.php?post_type=acf'); ?>">Get Started!</a></h3>
 	<?php } // End if ?>
-<?php } //acf_spv_show_variables() 
-?>
+<?php } //acf_spv_show_variables() ?>
