@@ -92,7 +92,7 @@ function acf_spv_show_variables(){
 					echo "<tr id=''><td><div id='div-".sanitize_title($acf_field_group_TITLE)."' class='code' style='padding:25px;'>";
 					if($count = 1): 
 						$count++; 
-					    echo '<span style="opacity:0;">&lt;!---</span><button style="display:block;" class="btn noselect" data-clipboard-action="copy" data-clipboard-target="#div-'.sanitize_title($acf_field_group_TITLE).'"> Copy Code </button><span style="opacity:0;">--&gt;</span>';
+					    echo '<div style="display:block;float:right;"><span style="opacity:0;">&lt;!---</span><button style="" class="btn noselect" data-clipboard-action="copy" data-clipboard-target="#div-'.sanitize_title($acf_field_group_TITLE).'"> Copy Code </button><span style="opacity:0;">--&gt;</span></div>';
 
 					    echo "<pre>&lt;?php<br>/*<br>";
 					    echo "<br>*************************************<br>";
