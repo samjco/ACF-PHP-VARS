@@ -1,7 +1,7 @@
 === ACF PHP VARS ===
 Contributors: Sam Cohen
 Donate Link: https://PayPal.Me/samjco
-Tags: advanced custom fields, variables, vars, acf, php
+Tags: advanced custom fields, acf, developer, development, variables, vars, php
 Requires at least: 3.0.1
 Tested up to: 4.1
 Version: 1.0
@@ -20,7 +20,7 @@ You are now able to get a complete list of fields that you have created so you c
 
 This plugin keeps you from having to keep switching back-and-forth screens in order to copy-and-paste field names to your file. whew!
 
-I hope that you enjoy this plugin.
+I hope that you enjoy this plugin. Your donations to (https://PayPal.Me/samjco) will help to make this plugin better!
 
 == Installation ==
 
