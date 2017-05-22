@@ -2,11 +2,11 @@
 /*
 Plugin Name: ACF PHP VARIABLES
 Depends: Advanced Custom Fields
-Plugin URI: http://www.samcohen.net
+Plugin URI: https://linkedin.com/in/samcohen/
 Description: This addition to ACF allow developers to see all variables available with field groups made allowing for faster development.
 Version: 1.0
 Author: Sam Cohen
-Author URI: http://www.samcohen.net
+Author URI: https://linkedin.com/in/samcohen/
 
 This plugin was built off of ACF SHOW DISPLAY Plugin - Special Thanks.
 */
