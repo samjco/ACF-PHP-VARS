@@ -4,7 +4,7 @@ Plugin Name: ACF Theme PHP
 Depends: Advanced Custom Fields
 Plugin URI: https://twitter.com/samcohennet
 Description: This addition to ACF allow developers to see all variables available with field groups made allowing for faster development. Supports ACF PRO.
-Version: 1.2
+Version: 1.3
 Author: Samjco
 Author URI: https://twitter.com/samcohennet
 
