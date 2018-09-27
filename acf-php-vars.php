@@ -2,13 +2,13 @@
 /*
 Plugin Name: ACF PHP VARIABLES
 Depends: Advanced Custom Fields
-Plugin URI: https://linkedin.com/in/samcohen/
-Description: This addition to ACF allow developers to see all variables available with field groups made allowing for faster development.
-Version: 1.0
-Author: Sam Cohen
-Author URI: https://linkedin.com/in/samcohen/
+Plugin URI: https://twitter.com/samcohennet
+Description: This addition to ACF allow developers to see all variables available with field groups made allowing for faster development. Supports ACF PRO.
+Version: 1.2
+Author: Samjco
+Author URI: https://twitter.com/samcohennet
 
-This plugin was built off of ACF SHOW DISPLAY Plugin - Special Thanks.
+Display your vars from ACF!
 */
 
 if( !defined('ABSPATH') ){
@@ -40,7 +40,28 @@ function hook_to_acf_installed(){
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 //Check to see if ACF if added, and if so, hook into WP
-if(is_plugin_active('advanced-custom-fields/acf.php')){
-	add_action('admin_enqueue_scripts', 'hook_to_acf_installed');
+if((is_plugin_active('advanced-custom-fields/acf.php')) || ( class_exists('acf_pro') ) || ( class_exists('acf') ) || (is_plugin_active('advanced-custom-fields-pro/acf.php'))): //Add class_exists('acf')
+	add_action('admin_enqueue_scripts', 'hook_to_acf_installed');	
 	add_action('init', 'get_acfspv_options');
-}
+
+	if(constant('ACF_LITE') == true):
+	function wpa80368_admin_notice() {
+
+	        echo '<div class="updated"><p>';
+	        echo "<strong>ACF Theme PHP Warning! Constant is set as <pre>define('ACF_LITE',true)</pre>; </strong> Please set constant to <pre>define('ACF_LITE',false)</pre> in order for ACF Theme PHP to work.";
+	        echo '</p></div>';
+	   
+	}
+	add_action( 'admin_notices', 'wpa80368_admin_notice' );
+
+	endif;
+else:
+	function wpa80367_admin_notice() {
+
+	        echo '<div class="updated"><p>';
+	        echo '<strong>ACF Theme PHP Activation Alert!</strong> Please install and activate <a class="thickbox" href="plugin-install.php?tab=plugin-information&plugin=advanced-custom-fields&TB_iframe=true&width=772&height=913">Advanced Custom Fields</a> OR <a class="thickbox" href="https://www.advancedcustomfields.com/pro/?&TB_iframe=true&width=772&height=913">Advanced Custom Fields PRO</a> first to activate ACF Theme PHP. ';
+	        echo '</p></div>';
+	   
+	}
+	add_action( 'admin_notices', 'wpa80367_admin_notice' );
+endif;
