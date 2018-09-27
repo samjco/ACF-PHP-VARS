@@ -12,7 +12,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Special thanks to the ACF field display plugin.
 == Description == 
 
-Finally being able to copy all ACF field group variables is here!!!!!
+Finally being able to copy all ACF field group variables is here!!!
+
+***Now Supports ACF PRO!***
 
 This plugin was build for the fantastic Advanced Custom Fields plugin created by Elliot Condon, and was made so that referencing custom fields is easier. This plugin was made to make life easy for developers who uses Advanced custom fields. 
 
