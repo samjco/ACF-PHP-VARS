@@ -68,29 +68,32 @@ function acf_spv_show_variables($fgvar){
 		?>
 		
 
-	<h2 class="acfpv-title">ACF Show PHP Variables | Template Usage</h2>
 
-	<p class="description">(Copy and Paste into your template file.)</p>
 
 	<?php if($acf_field_group_VARS[0] != ''){ ?>
+	<style>pre{font-family: Monaco, monospace !important;}</style>
+
 		<table id="acf-table" class="tablesorterx wp-list-table widefat users">
 			<thead>
-				<tr class="tr-tablehead"> 
-					
+				<tr class="tr-tablehead"> 	<th>
+					<h2 class="acfpv-title">ACF Show PHP Variables | Template Usage</h2>
 
-				<th><span class="vartitle"><strong>Variables for ACF function:</strong></span>
+	<p class="description">(Copy and Paste into your template file.)</p>	
+
+			
 					<?php 
 					$getf = " get_field(&#39;variable_name&#39;);";
 					$thef = " the_field(&#39;variable_name&#39;);";
-					$getfinst = " - This function gets the string of a value and allows you to store in a variable.";
-					$thefinst = " - This function immediately displays values and cannot be store as a string.";
+					$getfinst = "&nbsp;&nbsp;This ACF get_ function gets the string, value, or object and allows it to store in a variable.";
+					$thefinst = "&nbsp;&nbsp;This ACF the_ function immediately displays values and cannot be store in variable.";
 					echo "<div class='vardesc'";
-                    echo "<span style='padding:2px 6px;background:#eee;' class='code'>";
-					echo "<span class='change-function' data-name1='" . $thef . "' data-name2='".$getf."'>" . $getf . "</span>"; 
-					echo "</span>";
-					echo "<span class='description'>";
-					echo "<span class='change-function' data-name1='" . $thefinst . "' data-name2='".$getfinst."'>" . $getfinst . "</span>"; 
-					echo "</span>";
+                    echo "<div style='padding:2px 6px; background:#eee;' class='code'><br>";
+                    echo '<div class="vartitle">&nbsp;&nbsp;<strong>Variables for ACF function:</strong></div>';
+					echo "<pre class='change-function' data-name1='" . $thef . "' data-name2='".$getf."'>" . $getf . "</pre>"; 
+					// echo "</div>";
+					// echo "<div class='description'>";
+					echo "<div class='change-function' data-name1='" . $thefinst . "' data-name2='".$getfinst."'>" . $getfinst . "</div><br>"; 
+					echo "</div>";
 					echo "</div>";
 					?>
 					<br><div class="toggle-container" style="margin-top:8px;padding:6px 0px; border: 1px solid #ddd;background:#eee;">
@@ -157,11 +160,10 @@ function acf_spv_show_variables($fgvar){
 	 				endif;
 	 			
  				endif;
-
 					echo "<tr class='tr-".sanitize_title($acf_field_group_TITLE)." ".$hide."'><td><div id='div-".sanitize_title($acf_field_group_TITLE)."' class='code' style='padding:25px;'>";
 					if($count = 1): 
 						$count++; 
-					    echo '<div class="noselect" style="display:block;text-align:left;"><span style="opacity:0;">&lt;!---</span><br><a class="button btn noselect" data-clipboard-action="copy" data-clipboard-target="#div-'.sanitize_title($acf_field_group_TITLE).'"> Copy Code </a><br><span style="opacity:0;">--&gt;</span></div>';
+					    echo '<div class="noselect" style="display:block;text-align:left;"><span style="opacity:0;">&lt;!---</span><br><a class="button btn noselect" data-clipboard-action="copy" data-clipboard-target="#div-'.sanitize_title($acf_field_group_TITLE).'"> COPY </a><br><span style="opacity:0;">--&gt;</span></div>';
 					    echo "<pre>&lt;?php<br></pre>";
 					    echo "<pre class='notebox'>/**";
 					    echo "<br>****************************************************************<br>";
