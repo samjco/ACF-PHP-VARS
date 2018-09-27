@@ -3,7 +3,9 @@ Show ACF group field variables.
 
 <img src="https://github.com/samjco/ACF-PHP-VARS/blob/master/banner-772x250.jpg?raw=true" />
 
-Finally being able to copy all ACF field group variables is here!!!!!
+Finally being able to copy all ACF field group variables is here!!!
+
+**Now Supports ACF PRO!**
 
 This plugin was build for the fantastic Advanced Custom Fields plugin created by Elliot Condon, and was made so that referencing custom fields is easier. This plugin was made to make life easy for developers who uses Advanced custom fields. 
 
